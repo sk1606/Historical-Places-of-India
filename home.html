@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places - Explore India</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightgreen;
+        }
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background-color: thistle;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-title img {
+            height: 80px;
+            width: auto;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-image {
+            margin-top: 10px;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        /* Navigation */
+        .navbar {
+            margin-top: 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: purple;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff8c00;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            height: 70vh;
+            background-image: url('images/india3.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: blue;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Welcome Section */
+        #about-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Explore Historical Places in India</h1>
+            <p><strong>Presented by Supriya Korlagunta</strong></p>
+            <img src="images/my pic.jpg" alt="Supriya Korlagunta" class="header-image">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="places.html">Historical Places</a></li>
+                <li><a href="facts.html">Interesting Facts</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Discover the Cultural Heritage of India</h1>
+        <p>Explore the historical landmarks and monuments of India.</p>
+        <button onclick="window.location.href='places.html'">Explore Places</button>
+    </div>
+
+    <section id="about-section">
+        <h2>Welcome to the History of India</h2>
+        <p>
+            India, a vast and diverse country, is known for its rich cultural heritage and history spanning thousands of years. 
+            It is home to ancient civilizations, iconic landmarks like the Taj Mahal, and a tapestry of languages, religions, 
+            and traditions. India is the world’s largest democracy and has a fast-growing economy, making significant contributions 
+            in science, technology, and arts. Its vibrant festivals, cuisine, and landscapes, ranging from the Himalayas to tropical 
+            beaches, attract millions of visitors worldwide. The country’s diversity is reflected in its unity, symbolizing the phrase 
+            "Unity in Diversity."
+        </p>
+        <div class="image-container">
+            <img src="images/h1.jpg" alt="Historical Image 1">
+            <img src="images/h2.jpg" alt="Historical Image 2">
+            <img src="images/h3.jpg" alt="Historical Image 3">
+            <img src="images/h4.jpg" alt="Historical Image 4">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Supriya Korlagunta | Historical Places in India</p>
+    </footer>
+</body>
+</html>
 
