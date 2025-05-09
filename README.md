@@ -19,23 +19,6 @@ Built using HTML5, CSS3, and JavaScript, this project offers a responsive and us
 - CSS3
 - JavaScript
 
-## Installation & Usage
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/historical-places-india.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd historical-places-india
-   ```
-3. Open the `index.html` file in your browser to view the website locally.
-
-## Contributing
-Contributions are welcome! Feel free to fork this repository and submit a pull request for any enhancements or new features.
-
-## License
-This project is open source and available under the [MIT License](LICENSE).
-
 ## Acknowledgements
 - All images and data used are for educational purposes.
 - Inspired by the beauty and history of India's cultural heritage.
