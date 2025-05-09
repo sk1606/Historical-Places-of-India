@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/india1.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: maroon;
+        }
+
+        header {
+            color: maroon;
+            text-align: center;
+            padding: 50px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            background-color: maroon;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #places-section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .places-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .place {
+            width: 250px;
+            margin: 10px;
+            transition: transform 0.2s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .place img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .place h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .place p {
+            font-size: 0.9em;
+            color: purple;
+        }
+
+        .place:hover {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        #quiz-section {
+            padding: 50px;
+            text-align: center;
+            background-color: pink;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        #contact-section {
+            padding: 50px;
+            text-align: center;
+            background-color: thistle;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        input, textarea {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: lightcoral;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/my pic.jpg" alt="Supriya Korlagunta">
+        <h1>Explore Historical Places in India</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="facts.html">Interesting Facts</a></li>
+            <li><a href="foods.html">Foods and Culture</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="places-section">
+        <h2>Featured Historical Places</h2>
+        <div class="places-grid">
+            <div class="place" onclick="openLightbox('images/taj.jpg')">
+                <img src="images/taj.jpg" alt="Taj Mahal">
+                <h3>Taj Mahal</h3>
+                <p>The Taj Mahal, a UNESCO World Heritage Site, is an architectural marvel built by Emperor Shah Jahan.</p>
+            </div>
+            <div class="place" onclick="openLightbox('images/ajanta.jpg')">
+                <img src="images/ajanta.jpg" alt="Ajanta Caves">
+                <h3>Ajanta Caves</h3>
+                <p>The Ajanta Caves are famous for their rock-cut Buddhist monuments and ancient frescoes.</p>
+            </div>
+            <div class="place" onclick="openLightbox('images/golden.jpg')">
+                <img src="images/golden.jpg" alt="Golden Temple">
+                <h3>Golden Temple</h3>
+                <p>The Golden Temple, located in Amritsar, is the holiest site of Sikhism with its serene surroundings.</p>
+            </div>
+            <div class="place" onclick="openLightbox('images/amaravathi.jpg')">
+                <img src="images/amaravathi.jpg" alt="Amaravathi">
+                <h3>Amaravathi</h3>
+                <p>Amaravathi is home to the ancient Amaravathi Stupa, a significant site in Indian Buddhism.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Large Image">
+    </div>
+
+    <section id="quiz-section">
+        <h2>Test Your Knowledge</h2>
+        <p>What is the name of the monument built by Emperor Shah Jahan?</p>
+        <button onclick="alert('Correct! It is the Taj Mahal.')">Taj Mahal</button>
+        <button onclick="alert('Incorrect! Try again.')">Qutub Minar</button>
+    </section>
+
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Supriya Korlagunta | Historical Places in India</p>
+        <p>October 2024</p>
+    </footer>
+
+    <script>
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for your message!");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
 
