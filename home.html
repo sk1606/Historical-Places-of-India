@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical Places - Explore India</title>
     <style>
         /* General Styles */
@@ -27,20 +25,6 @@
             width: auto;
         }
 
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .header-image {
-            margin-top: 10px;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-
         /* Navigation */
         .navbar {
             margin-top: 20px;
@@ -52,11 +36,10 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         .navbar ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         .navbar ul li a {
@@ -74,8 +57,9 @@
 
         /* Hero Section */
         .hero {
+            margin-top: -30px;  
             width: 100%;
-            height: 70vh;
+            height: 70vh; 
             background-image: url('images/india3.jpg');
             background-position: center;
             background-size: cover;
@@ -85,11 +69,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 20px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.5rem; 
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             margin-bottom: 20px;
         }
@@ -108,25 +91,42 @@
             cursor: pointer;
         }
 
-        /* Welcome Section */
-        #about-section {
-            padding: 50px 20px;
-            text-align: center;
+        /* Header with Image and Name */
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
+        .header-image {
+            margin-top: 10px;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        /* Welcome Section */
+        #about-section {
+            padding: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Image Container */
         .image-container {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-around; 
+            flex-wrap: wrap; 
             margin-top: 20px;
         }
 
         .image-container img {
-            width: 200px;
-            height: 200px;
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
+            width: 200px; 
+            height: 200px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            object-fit: cover; 
+            margin: 10px; 
         }
 
         /* Footer */
@@ -135,27 +135,11 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .navbar ul {
-                flex-direction: column;
-            }
-
-            .navbar ul li {
-                margin: 10px 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -163,6 +147,7 @@
         <div class="header-content">
             <h1>Explore Historical Places in India</h1>
             <p><strong>Presented by Supriya Korlagunta</strong></p>
+            <!-- Add your image below -->
             <img src="images/my pic.jpg" alt="Supriya Korlagunta" class="header-image">
         </div>
         <nav class="navbar">
@@ -181,21 +166,16 @@
         <button onclick="window.location.href='places.html'">Explore Places</button>
     </div>
 
+    <!-- Welcome Section -->
     <section id="about-section">
         <h2>Welcome to the History of India</h2>
-        <p>
-            India, a vast and diverse country, is known for its rich cultural heritage and history spanning thousands of years. 
-            It is home to ancient civilizations, iconic landmarks like the Taj Mahal, and a tapestry of languages, religions, 
-            and traditions. India is the world’s largest democracy and has a fast-growing economy, making significant contributions 
-            in science, technology, and arts. Its vibrant festivals, cuisine, and landscapes, ranging from the Himalayas to tropical 
-            beaches, attract millions of visitors worldwide. The country’s diversity is reflected in its unity, symbolizing the phrase 
-            "Unity in Diversity."
-        </p>
+        <p>India, a vast and diverse country, is known for its rich cultural heritage and history spanning thousands of years. It is home to ancient civilizations, iconic landmarks like the Taj Mahal, and a tapestry of languages, religions, and traditions. India is the world’s largest democracy and has a fast-growing economy, making significant contributions in science, technology, and arts. Its vibrant festivals, cuisine, and landscapes, ranging from the Himalayas to tropical beaches, attract millions of visitors worldwide. The country’s diversity is reflected in its unity, symbolizing the phrase "Unity in Diversity."</p>
+        
         <div class="image-container">
-            <img src="images/h1.jpg" alt="Historical Image 1">
-            <img src="images/h2.jpg" alt="Historical Image 2">
-            <img src="images/h3.jpg" alt="Historical Image 3">
-            <img src="images/h4.jpg" alt="Historical Image 4">
+            <img src="images/h1.jpg" alt="Image1"> 
+            <img src="images/h2.jpg" alt="Image2"> 
+            <img src="images/h3.jpg" alt="Image3"> 
+            <img src="images/h4.jpg" alt="Image4">
         </div>
     </section>
 
@@ -204,4 +184,3 @@
     </footer>
 </body>
 </html>
-

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Famous Foods and Cultures</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/bfood.jpg'); /* Add background image */
+            background-size: cover;
+            background-attachment: fixed;
+            color: maroon;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(52, 152, 219, 0.8); /* Transparent blue background */
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%; 
+            border: 3px solid white;
+        }
+
+        nav {
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            border-radius: 8px;
+        }
+
+        .place-section {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .place-section h2 {
+            color: #3498db;;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .info img {
+            width: 400px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .content {
+            max-width: 500px;
+        }
+
+        .favorite-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color:red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .favorite-btn.favorited {
+            background-color: lightgreen;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(52, 152, 219, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Famous Food and Culture</h1>
+        <!-- Add your profile picture in the header -->
+        <img src="images/my pic.jpg" alt="Supriya Korlagunta">
+        <nav>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="places.html">Historical Places</a></li>
+                <li><a href="facts.html">Interesting Facts</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </header>
+    <main>
+        <!-- Taj Mahal Section -->
+        <section id="tajmahal" class="food">
+            <h2>Taj Mahal, Agra</h2>
+            <div class="info">
+                <img src="images/tfood.jpg" alt="Taj Mahal" onclick="showFoodInfo('Agra Petha, Mughlai cuisine, especially kebabs and biryani')">
+                <div class="content">
+                    <p><strong>Cultural Significance:</strong> The Taj Mahal symbolizes eternal love, combining Persian, Islamic, and Indian architectural styles.</p>
+                    <p><strong>Famous Food:</strong> Agra Petha, Mughlai cuisine, especially kebabs and biryani.</p>
+                </div>
+            </div>
+            <button class="favorite-btn" id="favorite-tajmahal">Add to Favorites</button>
+        </section>
+
+        <!-- Ajanta Caves Section -->
+        <section id="ajanta" class="food">
+            <h2>Ajanta Caves, Maharashtra</h2>
+            <div class="info">
+                <img src="images/afood.jpg" alt="Ajanta Caves" onclick="showFoodInfo('Vada Pav, Misal Pav, and Puran Poli')">
+                <div class="content">
+                    <p><strong>Cultural Significance:</strong> Ajanta Caves are ancient Buddhist rock-cut monuments with intricate frescoes.</p>
+                    <p><strong>Famous Food:</strong> Vada Pav, Misal Pav, and Puran Poli.</p>
+                </div>
+            </div>
+            <button class="favorite-btn" id="favorite-ajanta">Add to Favorites</button>
+        </section>
+
+        <!-- Golden Temple Section -->
+        <section id="golden-temple" class="food">
+            <h2>Golden Temple, Amritsar</h2>
+            <div class="info">
+                <img src="images/gfood.jpg" alt="Golden Temple" onclick="showFoodInfo('Amritsari Kulcha, Makki di Roti with Sarson da Saag, and Lassi')">
+                <div class="content">
+                    <p><strong>Cultural Significance:</strong> The Golden Temple stands for equality, humility, and selfless service. The Langar serves free meals to thousands daily.</p>
+                    <p><strong>Famous Food:</strong> Amritsari Kulcha, Makki di Roti with Sarson da Saag, and Lassi.</p>
+                </div>
+            </div>
+            <button class="favorite-btn" id="favorite-goldentemple">Add to Favorites</button>
+        </section>
+
+        <!-- Amaravati Section -->
+        <section id="amaravati" class="food">
+            <h2>Amaravati, Andhra Pradesh</h2>
+            <div class="info">
+                <img src="images/pulihora.jpg" alt="Amaravati" onclick="showFoodInfo('Pulihora, Gongura Pachadi, and Pootharekulu')">
+                <div class="content">
+                    <p><strong>Cultural Significance:</strong> Amaravati was a significant Buddhist center, home to one of India's largest stupas.</p>
+                    <p><strong>Famous Food:</strong> Pulihora, Gongura Pachadi, and Pootharekulu.</p>
+                </div>
+            </div>
+            <button class="favorite-btn" id="favorite-amaravati">Add to Favorites</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Historical Places of India | Designed by Supriya Korlagunta</p>
+    </footer>
+
+    <script>
+        // Function to show food information
+        function showFoodInfo(food) {
+            alert("Famous food: " + food);
+        }
+
+        // Function to handle the Favorite button functionality
+        document.addEventListener("DOMContentLoaded", function () {
+            const places = ['tajmahal', 'ajanta', 'goldentemple', 'amaravati'];
+
+            places.forEach(function (place) {
+                const button = document.getElementById('favorite-' + place);
+
+                // Check if the place is already favorited
+                if (localStorage.getItem(place) === 'favorited') {
+                    button.textContent = "Favorited";
+                    button.classList.add('favorited');
+                }
+
+                // Add click event listener for the button
+                button.addEventListener('click', function () {
+                    if (localStorage.getItem(place) === 'favorited') {
+                        // If already favorited, remove from favorites
+                        localStorage.removeItem(place);
+                        button.textContent = "Add to Favorites";
+                        button.classList.remove('favorited');
+                    } else {
+                        // Mark the place as favorited
+                        localStorage.setItem(place, 'favorited');
+                        button.textContent = "Favorited";
+                        button.classList.add('favorited');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
